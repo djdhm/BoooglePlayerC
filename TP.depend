@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1528826098 source:c:\users\bibicha\desktop\dames-c\tp\bibdict.c
+	<stdlib.h>
+	"bibdict.h"
+	<stdio.h>
+	<stdbool.h>
+
+1528826044 source:c:\users\bibicha\desktop\dames-c\tp\main.c
+	"bibdict.h"
+
+1528705975 c:\users\bibicha\desktop\dames-c\tp\tt.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<malloc.h>
+
+1528825477 c:\users\bibicha\desktop\dames-c\tp\bibdict.h
+	<stdbool.h>
+
