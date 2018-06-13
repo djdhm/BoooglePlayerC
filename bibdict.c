@@ -2,6 +2,29 @@
 #include "bibdict.h"
 #include <stdio.h>
 #include <stdbool.h>
+
+
+#define BLOCK_SIZE_X 5
+#define BLOCK_SIZE_Y 4
+
+void draw_box(int w, int h) {
+    int x, y;
+    for (y = 0; y <= h * BLOCK_SIZE_Y; y++) {
+        int on_horizontal = !(y % BLOCK_SIZE_Y);
+        for(x = 0; x <= w * BLOCK_SIZE_X; x++) {
+            int on_vertical = !(x % BLOCK_SIZE_X);
+            if (on_horizontal && on_vertical) {
+                printf("+");
+            } else if (on_horizontal) {
+                printf("-");
+            } else if (on_vertical) {
+                printf("|");
+            } else printf(" ");
+         }
+         printf("\n");
+    }
+}
+
 /**
     Créer une nouvelle feuille associé a une lettre et une variable
     indiquant si la feuille est un terminal ou non
@@ -169,15 +192,35 @@ bool rechercher_mot(dict * dictionnaire, char * mot){
         feuille * suivante;
         int longueur=strlen(mot);
         int i=0;
-
+        int k;
         while( actuel!=NULL &&  nb_fils(actuel)>0 && i<longueur){
             suivante=fils_lettre(actuel,mot[i]);
             actuel=suivante;
+             if(actuel!=NULL) {
+                printf("Noeud : %c\t   il a %d fils ",lettre(actuel),nb_fils(actuel));
+                printf("Les fils : ");
+                for(k=0;k<nb_fils(actuel);k++){
+                    char t=lettre(fils_ieme(actuel,k));
+                    if(t==mot[i+1]){
+                        printf("(%c)\t",t);
+                    }else{
+                        printf("%c\t",t);
+                    }
+                }
+                printf("\n\n\n");
+            }
             i++;
         }
-        if(i==longueur && terminal(actuel)==1){
+        if(actuel!=NULL && i==longueur && terminal(actuel)==1){
                 printf("Le mot existe dans le dictionnaire");
             return true;
+        }
+        if(i=longueur && actuel!=NULL){
+            printf("le noeud actuel n'est pas un noeud terminal !!\n");
+        }
+        else{
+                printf("Aucun noeud fils ne contient la lettre %c\n",mot[i]);
+
         }
         printf("Mot introuvable ...");
         return false;
@@ -197,7 +240,7 @@ dict * charger_fichier(char * chemin){
         int nombre_ligne;
         char * mot =malloc(60);
         fscanf(fichier,"%d",&nombre_ligne);
-        printf("le fichier contient %d lignes ", nombre_ligne);
+        printf("le fichier contient %d lignes \n", nombre_ligne);
         printf("Chargement des mots en memoire ...\n");
         int cpt=0;
         for(cpt;cpt<nombre_ligne;cpt++){
@@ -205,7 +248,7 @@ dict * charger_fichier(char * chemin){
             ajouter_mot(temp,mot);
         }
 
-        printf("Chargement terminé ...\n");
+        printf("Chargement termine ...\n");
         return temp;
 
 }
