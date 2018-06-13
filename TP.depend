@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1528854503 source:c:\users\bibicha\desktop\dames-c\tp\bibdict.c
+1528884960 source:c:\users\bibicha\desktop\dames-c\tp\bibdict.c
 	<stdlib.h>
 	"bibdict.h"
 	<stdio.h>
 	<stdbool.h>
 
-1528854516 source:c:\users\bibicha\desktop\dames-c\tp\main.c
+1528884060 source:c:\users\bibicha\desktop\dames-c\tp\main.c
 	"bibdict.h"
 
 1528705975 c:\users\bibicha\desktop\dames-c\tp\tt.c
@@ -16,4 +16,6 @@
 
 1528825477 c:\users\bibicha\desktop\dames-c\tp\bibdict.h
 	<stdbool.h>
+
+1528884951 source:c:\users\bibicha\desktop\dames-c\tp\bibgrille.c
 

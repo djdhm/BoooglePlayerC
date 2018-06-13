@@ -1,4 +1,5 @@
 #include "bibdict.h"
+#include "bibgrille.h"
 int main(int argc,char * argv){
 
  dict * didi=charger_fichier("dict.txt");
@@ -12,10 +13,10 @@ int main(int argc,char * argv){
     printf("rechercher un mot : ");
     char * mot=malloc(50);
    // scanf("%s",mot);
-    rechercher_mot(didi,"porrid");
+   // rechercher_mot(didi,"porriff");
 
     printf("\n");
 
-    //draw_box(4,5);
+    draw_box(4,5);
     return 0;
 }

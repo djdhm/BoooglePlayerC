@@ -4,26 +4,7 @@
 #include <stdbool.h>
 
 
-#define BLOCK_SIZE_X 5
-#define BLOCK_SIZE_Y 4
 
-void draw_box(int w, int h) {
-    int x, y;
-    for (y = 0; y <= h * BLOCK_SIZE_Y; y++) {
-        int on_horizontal = !(y % BLOCK_SIZE_Y);
-        for(x = 0; x <= w * BLOCK_SIZE_X; x++) {
-            int on_vertical = !(x % BLOCK_SIZE_X);
-            if (on_horizontal && on_vertical) {
-                printf("+");
-            } else if (on_horizontal) {
-                printf("-");
-            } else if (on_vertical) {
-                printf("|");
-            } else printf(" ");
-         }
-         printf("\n");
-    }
-}
 
 /**
     Créer une nouvelle feuille associé a une lettre et une variable
