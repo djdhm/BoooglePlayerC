@@ -10,13 +10,16 @@ int main(int argc,char * argv){
     printf("Nombre de mots total = %d\n",nb_mots(didi));
     printf("Nombre de noeuds total = %d\n",nb_noeuds(didi));
 
-    printf("rechercher un mot : ");
-    char * mot=malloc(50);
+  //  char * mot=malloc(50);
    // scanf("%s",mot);
    // rechercher_mot(didi,"porriff");
 
-    printf("\n");
+  //  printf("\n");
 
-    draw_box(4,5);
+    char ** test=malloc(5);
+    genererGrille(test,5,5);
+    printf("Affichage de la grille de lettres : ");
+    dessiner_grille(test,6,6);
+
     return 0;
 }
