@@ -4,9 +4,27 @@
 
 
 #endif // BIBGRILLE_H_INCLUDED
+struct grille{
+    // Tableau contenant les lettres de la grille
+    char ** tableau;
+    int largeur;
+    int longueur;
 
-void dessiner_grille(char ** lettres,int w, int h);
+};
 
-void genererGrille(char ** tab,int x,int y);
 
+typedef struct grille grille;
+
+
+
+char lettre_dans_case(grille *g,int x,int y);
+int largeur(grille * g);
+int longueur(grille * g);
+void dessiner_grille(grille * g);
+
+grille * genererGrille(int x,int y);
 char lettre_aleatoire();
+
+
+
+

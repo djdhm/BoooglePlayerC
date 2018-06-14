@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1528884960 source:c:\users\bibicha\desktop\dames-c\tp\bibdict.c
+1528918411 source:c:\users\bibicha\desktop\dames-c\tp\bibdict.c
 	<stdlib.h>
 	"bibdict.h"
 	<stdio.h>
 	<stdbool.h>
 
-1528884060 source:c:\users\bibicha\desktop\dames-c\tp\main.c
+1528978194 source:c:\users\bibicha\desktop\dames-c\tp\main.c
 	"bibdict.h"
+	"bibgrille.h"
 
 1528705975 c:\users\bibicha\desktop\dames-c\tp\tt.c
 	<stdio.h>
@@ -14,8 +15,13 @@
 	<math.h>
 	<malloc.h>
 
-1528825477 c:\users\bibicha\desktop\dames-c\tp\bibdict.h
+1528911261 c:\users\bibicha\desktop\dames-c\tp\bibdict.h
 	<stdbool.h>
 
-1528884951 source:c:\users\bibicha\desktop\dames-c\tp\bibgrille.c
+1528978374 source:c:\users\bibicha\desktop\dames-c\tp\bibgrille.c
+	<time.h>
+	<stdlib.h>
+	"bibgrille.h"
+
+1528978413 c:\users\bibicha\desktop\dames-c\tp\bibgrille.h
 

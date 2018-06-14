@@ -18,7 +18,7 @@ typedef struct feuille {
     char  lettre;
     struct feuille ** fils;
     int nb_fils;
-    int terminal;
+    bool terminal;
 
 } feuille;
 /**
@@ -41,7 +41,7 @@ typedef struct dict dict;
 
 
 
-feuille * nouvelle_feuille(char lettre,int terminal);
+feuille * nouvelle_feuille(char lettre,bool terminal);
 
 int nb_fils(feuille * f );
 feuille ** fils(feuille *f);
@@ -49,7 +49,7 @@ feuille * fils_ieme(feuille * f,int numero);
 char  lettre(feuille * f );
 
 void est_terminal(feuille *f);
-int terminal(feuille * f);
+bool terminal(feuille * f);
 feuille * fils_lettre(feuille * f,char c);
 void ajouter_fils(feuille * parent,feuille * fils);
 void supprimer_fils(feuille * parent,char c);

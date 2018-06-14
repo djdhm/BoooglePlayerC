@@ -16,10 +16,10 @@ int main(int argc,char * argv){
 
   //  printf("\n");
 
-    char ** test=malloc(5);
-    genererGrille(test,5,5);
+    grille * test;
+    test=genererGrille(5,5);
     printf("Affichage de la grille de lettres : ");
-    dessiner_grille(test,6,6);
+    dessiner_grille(test);
 
     return 0;
 }

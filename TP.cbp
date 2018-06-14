@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="bibdict.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bibdict.h" />
+		<Unit filename="bibgrille.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bibgrille.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
